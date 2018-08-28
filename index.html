@@ -56,8 +56,8 @@
                 .map(kv => kv.split('='))
                 .filter(([key, value]) => !!key && !!value)
                 .reduce((memo, [key, value]) => ({...memo, [key]: value}), {
-                    user: 'test@brianruddy.com',
-                    account: 'brianruddy'
+                    user: 'test@test.com',
+                    account: 'test'
                 });
             (function(apiKey) {
                 (function(p,e,n,d,o) {
