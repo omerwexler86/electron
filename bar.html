@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>testing</title>
+</head>
+
+<body>
+    <header>
+        <h1>bar.html</h1>
+    </header>
+    <main>
+        <h3>things it does</h3>
+        <p>
+            goes to <a href="/">index</a>
+        </p>
+    </main>
+    <script>
+        (function(apiKey) {
+            (function(p,e,n,d,o) {
+                var v,w,x,y,z; o=p[d]=p[d]||{}; o._q=[];
+                v=['initialize','identify','updateOptions','pageLoad']; for(w=0,x=v.length;w<x;++w)(function(m) {
+                    o[m]=o[m]||function() {o._q[m===v[0]? 'unshift':'push']([m].concat([].slice.call(arguments,0)));};
+                })(v[w]);
+                y=e.createElement(n); y.async=!0; y.src='https://pendo-dev-static.storage.googleapis.com/agent/static/'+apiKey+'/pendo.js';
+                z=e.getElementsByTagName(n)[0]; z.parentNode.insertBefore(y,z);
+            })(window,document,'script','pendo');
+            pendo.initialize({
+                apiKey: apiKey,
+                visitor: {
+                    id: 'test@bar.com'
+                },
+                account: {
+                    id: 'bar'
+                }
+            });
+        })('a91017ca-8dc2-43a2-673a-bb95a2b5a7e2');
+    </script>
+</body>
+
+</html>
